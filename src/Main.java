@@ -18,18 +18,19 @@ public class Main {
     float nothing1 = 27.12F;
     long nothing2 = 987_678_965_549L;
     double nothing3 = 2.786;
-    boolean nothing5 = false;
-    char nothing6 = 569;
-    short nothing7 = -159;
-    int nothing8 = 27897;
-    byte nothing9 = 67;
+    boolean nothing4 = false;
+    char nothing5 = 569;
+    short nothing6 = -159;
+    int nothing7 = 27897;
+    byte nothing8 = 67;
+
 
     //Задача 3
     byte class1 = 23;
     byte class2 = 27;
     byte class3 = 30;
     short totalSheets = 480;
-    int sheetsOneStudent = 480 / (class1 + class2 + class3);
+    int sheetsOneStudent = totalSheets / (class1 + class2 + class3);
     System.out.println("На каждого ученика рассчитано " + sheetsOneStudent + " листов бумаги");
 
     //Задача 4
@@ -54,11 +55,11 @@ public class Main {
             + boughtBrownPaint + " банок коричневой краски");
 
     //Задача 6
-    short bananes = 5 * 80;
+    short bananas = 5 * 80;
     short milk = 200 * 105;
     short iceCreamSundae = 2 * 100;
     short rawEggs = 4 * 70;
-    float totalWeight = bananes + milk + iceCreamSundae + rawEggs;
+    float totalWeight = bananas + milk + iceCreamSundae + rawEggs;
         System.out.println("Общий вес спорт-завтрака составляет " + totalWeight + " грамм");
     float totalWeightKg = totalWeight / 1000;
         System.out.println("Общий вес спорт-завтрака составляет " + totalWeightKg + " кг");
@@ -66,17 +67,17 @@ public class Main {
     //Задача 7
     short weightLoss1 = 250;
     short weightLoss2 = 500;
-    int totalWeight7 = weightLoss1 + weightLoss2;
     int weightLoss = 7;
-    int situation1 = (weightLoss * 1000) / 250;
-        System.out.println("При потере 250 гр веса каждый день, спортсмену необходимо " + situation1 + " дней");
-    int situation2 = (weightLoss * 1000) / 500;
-        System.out.println("При потере 500 гр веса каждый день, спортсмену необходимо " + situation2 + " дней");
-    int[] nums = {250, 500};
+    int measure1KgToGrams = 1000;
+    int situation1 = (weightLoss * measure1KgToGrams) / weightLoss1;
+        System.out.println("При потере " + weightLoss1 + " гр веса каждый день, спортсмену необходимо " + situation1 + " дней");
+    int situation2 = (weightLoss * measure1KgToGrams) / weightLoss2;
+        System.out.println("При потере " + weightLoss2 + " гр веса каждый день, спортсмену необходимо " + situation2 + " дней");
+    int[] nums = {weightLoss1, weightLoss2};
     int result = 0;
         for (int m : nums) {
         result += m;}
-    int situation3 = (weightLoss * 1000) / (result / nums.length);
+    int situation3 = (weightLoss * measure1KgToGrams) / (result / nums.length);
         System.out.println("При средней потере веса каждый день, спортсмену необходимо " + situation3 + " дней");
 
     //Задача 8
@@ -92,5 +93,6 @@ public class Main {
         System.out.println("Маша теперь получает " + (masha + (masha * 0.1)) + " рублей. Годовой доход вырос на " + (annualIncomeMasha2 - annualIncomeMasha1) + " рублей");
         System.out.println("Денис теперь получает " + (denis + (denis * 0.1)) + " рублей. Годовой доход вырос на " + (annualIncomeDenis2 - annualIncomeDenis1) + " рублей");
         System.out.println("Кристина теперь получает " + (kristina + (kristina * 0.1)) + " рублей. Годовой доход вырос на " + (annualIncomeKristina2 - annualIncomeKristina1) + " рублей");
+
     }
 }
